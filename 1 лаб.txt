@@ -1,0 +1,41 @@
+int rez;
+            int proizv = 1;
+            Console.WriteLine("Введите число");
+            try
+            {
+                int n = int.Parse(Console.ReadLine());
+                if (n > 0)
+                {
+                    Console.WriteLine("Конвертация успешна");
+                    for (int i = 1; i <= n; i++)
+                    {
+                        rez = proizv * i;
+                        proizv = rez;
+                        Console.WriteLine(rez);
+                    }
+                }
+                else
+                {
+                    if (n == 0)
+                    {
+                        Console.WriteLine("Факториал нуля равен 1");
+                    }
+                    if (n < 0)
+                    {
+                        Console.WriteLine("Отрицательные числа не имеют факториала");
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("ошибка конвертации");
+                Console.WriteLine("Введите другое число");
+                int n = int.Parse(Console.ReadLine());
+                for (int i = 1; i <= n; i++)
+                {
+                    rez = proizv * i;
+                    proizv = rez;
+                    Console.WriteLine(rez);
+                }
+            }

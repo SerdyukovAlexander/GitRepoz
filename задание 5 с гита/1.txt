@@ -1,0 +1,22 @@
+double a = Convert.ToDouble(Console.ReadLine());
+            if (a % 1 == 0)
+            {
+                Console.WriteLine(a);
+            }
+            else if (a%1!=0)
+            {
+                double b = Convert.ToDouble(Console.ReadLine());
+                bool rez = a > b;
+                if (rez)
+                {
+                    Console.WriteLine(a + " > " + b);
+                }
+                else
+                {
+                    Console.WriteLine(b + " > " + a);
+                }
+            }
+	    else
+	    {
+	        Console.Writeline("ошибка сравнения")
+ 	    }
